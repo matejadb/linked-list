@@ -101,6 +101,39 @@ export class LinkedList {
 		secondLast.nextNode = null;
 	}
 
+	contains(value) {
+		if (!this.head) {
+			return console.log(`Empty Linked List`);
+		}
+
+		let current = this.head;
+		while (current.nextNode) {
+			if (current.value.includes(value)) {
+				return true;
+			}
+			current = current.nextNode;
+		}
+
+		return false;
+	}
+
+	find(value) {
+		if (!this.head) {
+			return console.log(`Empty Linked List`);
+		}
+		let index = 0;
+		let current = this.head;
+		while (current.nextNode) {
+			if (current.value.includes(value)) {
+				return index;
+			}
+			current = current.nextNode;
+			index++;
+		}
+
+		return null;
+	}
+
 	toString() {
 		let printList = ``;
 		let current = this.head;

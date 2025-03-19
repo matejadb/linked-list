@@ -17,3 +17,7 @@ list.tailItem();
 list.at(1);
 list.pop();
 console.log(list.toString());
+console.log(list.contains('seal')); // false, seal removed from list
+console.log(list.contains('dog')); // true
+console.log(list.find('seal')); // null
+console.log(list.find('hamster')); // 3
