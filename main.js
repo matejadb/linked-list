@@ -23,3 +23,5 @@ console.log(list.find('seal')); // null
 console.log(list.find('hamster')); // 3
 list.insertAt('pewpew', 2);
 console.log(list.toString());
+list.removeAt(0);
+console.log(list.toString());

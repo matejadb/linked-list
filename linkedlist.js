@@ -155,6 +155,24 @@ export class LinkedList {
 		current.nextNode = newNode;
 	}
 
+	removeAt(index) {
+		if (index < 0) {
+			return console.log(`Index out of bounds`);
+		}
+		if (!this.head) {
+			return console.log(`Empty Linked List`);
+		}
+		if (index === 0) {
+			this.head = this.head.nextNode;
+		}
+		let current = this.head;
+		for (let i = 0; i < index - 1 && current !== null; i++) {
+			current = current.nextNode;
+		}
+
+		current.nextNode = current.nextNode.nextNode;
+	}
+
 	toString() {
 		let printList = ``;
 		let current = this.head;
