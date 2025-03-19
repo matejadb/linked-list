@@ -67,6 +67,25 @@ export class LinkedList {
 		console.log(current.value);
 	}
 
+	at(index) {
+		if (!this.head) {
+			return `Empty Linked List`;
+		}
+		let i = 0;
+		let current = this.head;
+
+		while (i < index) {
+			current = current.nextNode;
+			i++;
+		}
+
+		if (current === null) {
+			return console.log(`Index out of bounds`);
+		}
+
+		return console.log(current.value);
+	}
+
 	toString() {
 		let printList = ``;
 		let current = this.head;

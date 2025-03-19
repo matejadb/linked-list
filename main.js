@@ -14,3 +14,4 @@ console.log(list.toString());
 list.size();
 list.headItem();
 list.tailItem();
+list.at(1);
