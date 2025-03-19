@@ -31,6 +31,42 @@ export class LinkedList {
 		this.head = newNode;
 	}
 
+	size() {
+		if (!this.head) {
+			return console.log('0');
+		}
+		let count = 1;
+		let current = this.head;
+
+		while (current.nextNode) {
+			count += 1;
+			current = current.nextNode;
+		}
+
+		console.log(count);
+	}
+
+	headItem() {
+		if (!this.head) {
+			return `Empty Linked List`;
+		}
+
+		console.log(this.head.value);
+	}
+
+	tailItem() {
+		if (!this.head) {
+			return `Empty Linked List`;
+		}
+
+		let current = this.head;
+		while (current.nextNode) {
+			current = current.nextNode;
+		}
+
+		console.log(current.value);
+	}
+
 	toString() {
 		let printList = ``;
 		let current = this.head;
