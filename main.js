@@ -15,3 +15,5 @@ list.size();
 list.headItem();
 list.tailItem();
 list.at(1);
+list.pop();
+console.log(list.toString());

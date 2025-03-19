@@ -48,7 +48,7 @@ export class LinkedList {
 
 	headItem() {
 		if (!this.head) {
-			return `Empty Linked List`;
+			return console.log(`Empty Linked List`);
 		}
 
 		console.log(this.head.value);
@@ -56,7 +56,7 @@ export class LinkedList {
 
 	tailItem() {
 		if (!this.head) {
-			return `Empty Linked List`;
+			return console.log(`Empty Linked List`);
 		}
 
 		let current = this.head;
@@ -69,7 +69,7 @@ export class LinkedList {
 
 	at(index) {
 		if (!this.head) {
-			return `Empty Linked List`;
+			return console.log(`Empty Linked List`);
 		}
 		let i = 0;
 		let current = this.head;
@@ -84,6 +84,21 @@ export class LinkedList {
 		}
 
 		return console.log(current.value);
+	}
+
+	pop() {
+		if (!this.head) {
+			return console.log(`Empty Linked List`);
+		}
+		if (!this.head.nextNode) {
+			return null;
+		}
+		let secondLast = this.head;
+		while (secondLast.nextNode.nextNode) {
+			secondLast = secondLast.nextNode;
+		}
+
+		secondLast.nextNode = null;
 	}
 
 	toString() {
