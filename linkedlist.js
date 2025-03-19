@@ -16,7 +16,19 @@ export class LinkedList {
 		while (current.nextNode) {
 			current = current.nextNode;
 		}
+
 		current.nextNode = newNode;
+	}
+
+	prepend(value) {
+		let newNode = new Node(value);
+		if (!this.head) {
+			this.head = newNode;
+			return;
+		}
+
+		newNode.nextNode = this.head;
+		this.head = newNode;
 	}
 
 	toString() {
