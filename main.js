@@ -21,3 +21,5 @@ console.log(list.contains('seal')); // false, seal removed from list
 console.log(list.contains('dog')); // true
 console.log(list.find('seal')); // null
 console.log(list.find('hamster')); // 3
+list.insertAt('pewpew', 2);
+console.log(list.toString());
